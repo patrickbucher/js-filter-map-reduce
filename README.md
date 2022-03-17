@@ -6,13 +6,29 @@ Das folgende Beispiel können Sie entweder im Browser ausführen und mit den Dev
 
 Testen Sie anschliessend, ob der `node`-Befehl eine entsprechende Kommandozeile anzeigt, welche JavaScript interpretiert:
 
-    nodejs
+    node
     > console.log('Hello, World!')
     Hello, World!
 
 ## Aufgabe: Bonusberechnung für Mitarbeiter
 
-Die Datei `employees.js` enthält eine Reihe von Mitarbeitern (`employees`). Den Ingenieuren ("Engineers"), aber nicht den anderen Berufsgruppen, soll ein Bonus vom 10% ihres jeweiligen Jahreslohns ausbezahlt werden. Nun will die Firma wissen, wie viel sie das kosten wird. Berechnen Sie diese Zahl folgendermassen:
+Die Datei `employees.js` enthält eine Reihe von Mitarbeitern (`employees`).
+
+Verwenden Sie `node`, um die Mitarbeiter auszugeben:
+
+    node employees.js
+    [
+        { name: 'Dilbert', position: 'Engineer', salary: 120000 },
+        { name: 'Ashok', position: 'Intern', salary: 25000 },
+        { name: 'Wally', position: 'Engineer', salary: 110000 },
+        { name: 'Pointy-Haired Boss', position: 'Manager', salary: 190000 },
+        { name: 'Dogbert', position: 'Consultant', salary: 220000 },
+        { name: 'Alice', position: 'Engineer', salary: 115000 }
+    ]
+
+Alternativ können Sie die Datei `index.html` öffnen, und nach einem Neuladen in der Developer Console die Ausgabe betrachten.
+
+Den Ingenieuren ("Engineers"), aber nicht den anderen Berufsgruppen, soll ein Bonus vom 10% ihres jeweiligen Jahreslohns ausbezahlt werden. Nun will die Firma wissen, wie viel sie das kosten wird. Berechnen Sie diese Zahl folgendermassen:
 
 ### Mit einer Schleife
 
