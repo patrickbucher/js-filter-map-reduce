@@ -30,7 +30,7 @@ Alternativ können Sie die Datei `index.html` öffnen, und nach einem Neuladen i
 
 Den Ingenieuren ("Engineers"), aber nicht den anderen Berufsgruppen, soll ein Bonus vom 10% ihres jeweiligen Jahreslohns ausbezahlt werden. Nun will die Firma wissen, wie viel sie das kosten wird. Berechnen Sie diese Zahl folgendermassen:
 
-### Mit einer Schleife
+### 1) Mit einer Schleife
 
 Als erstes können Sie entweder eine klassische [`for`-Schleife](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for) (mit Zählervariable) oder eine [`for`/`of`-Schleife](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) schreiben, um über die einzelnen Mitarbeiter zu iterieren.
 
@@ -40,7 +40,7 @@ Bei jedem Durchlauf machen Sie folgendes:
 2. Ist dies der Fall, nehmen Sie 10% des Gehalts (`employee.salary`) und addieren Sie das zu einer laufenden Summe.
 3. Nach der Schleife geben Sie diese Summe aus. Dies ist der Bonus, der total ausbezahlt werden muss.
 
-### Mit drei Schleifen
+### 2) Mit drei Schleifen
 
 Die einzelnen Verarbeitungsschritte können auseinandergenommen werden, indem man den ganzen Berechnungsprozess auf drei Schleifen verteilt.
 
@@ -50,17 +50,17 @@ Die einzelnen Verarbeitungsschritte können auseinandergenommen werden, indem ma
 
 Diese Aufteilung in drei Schleifen mag Ihnen vielleicht als umständlich erscheinen, führt uns aber näher zur Verallgemeinerung solcher Verarbeitungen.
 
-### Mit Hilfsfunktionen
+### 3) Mit Hilfsfunktionen
 
 Erstellen Sie drei Hilfsfunktionen (mithilfe von [`function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function)), welche folgendermassen funktionieren sollten:
 
 1. **Prädikatsfunktion** `isEngineer`: Diese nimmt als Parameter einen `employee` entgegen und gibt zurück (Boolean), ob es sich hierbei um einen Ingenieur handelt (`true`) oder nicht (`false`).
 2. **Transformationsfunktion** `calculateBonus`: Diese nimmt als Parameter einen `employee` entgegen und gibt den berechneten Bonus zurück, d.h. 10% des Gehalts.
-3. **Reduktionsfunktion** `sumUp`: Diese nimmt als Parameter die laufende Summe und einen bonus entgegen, summiert diese beiden Zahlen auf und gibt die Summe zurück.
+3. **Reduktionsfunktion** `sumUp`: Diese nimmt als Parameter die laufende Summe und einen Bonus entgegen, summiert diese beiden Zahlen auf und gibt die Summe zurück.
 
 Passen Sie die Schleifenkörper nun so an, dass diese drei neuen Hilfsfunktionen zur Berechnung des Gesamtbonus verwendet werden.
 
-### Mit `filter`, `map`, `reduce`
+### 4) Mit `filter`, `map`, `reduce`
 
 Diese drei Arten von Verarbeitungsschritten -- Filterung, Transformation und Reduktion -- werden so häufig gebraucht, dass JavaScript hierzu spezielle Funktionen anbietet. Hierbei handelt es sich um _Funktionen höherer Ordnung_; das sind Funktionen, welche andere Funktionen als Parameter erwarten.
 
@@ -70,11 +70,11 @@ Behalten Sie die gerade geschriebenen Hilfsfunktionen bei, aber eliminieren Sie 
 2. **Transformation**: mit [`map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 3. **Reduktion**: mit [`reduce`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 
-Gehen Sie dabei Schleife für Schleife vor und überprüfen Sie, ob das jeweilige Zwischenergebnis noch korrekt ist.
+Gehen Sie dabei Schleife für Schleife vor und überprüfen Sie (mit `console.log`), ob das jeweilige Zwischenergebnis noch korrekt ist.
 
 Beantworten Sie folgende Frage: Was ist der Vorteil von `filter`/`map`/`reduce` gegenüber den Lösungen mit einer Schleife bzw. mit drei Schleifen? Sehen Sie auch Nachteile?
 
-### Zusatzaufgabe
+### 5) Zusatzaufgabe
 
 Versuchen Sie die drei Funktionen `filter`, `map` und `reduce` selber zu implementieren. Wenn Sie die Lösung mit den Schleifen und Hilfsfunktionen erarbeiten konnten, dürften `filter` und `map` keine Schwierigkeit darstellen.
 
